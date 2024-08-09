@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Search delivery item">
+
+        <lightning-input label="Deliveri ID"
+                          value={deliveryId} 
+                          onchange={handleDeliveryIdChange} class="slds-p-around_small">
+        </lightning-input>
+
+        <lightning-button label="Search"
+                          variant="brand"
+                          onclick={handleSearch} class="slds-p-around_small">
+        </lightning-button>
+
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-datatable key-field="Id" data={records} columns={cols} class="slds-p-around_small">
+                
+            </lightning-datatable>
+        </lightning-layout-item>
+        
+    </lightning-card>
+</template>
